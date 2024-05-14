@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Diabetes Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Diabetes Prediction</h1>
+      <div class="row center">
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="HighBP"><b>High Blood Pressure</b></label>
+            <br>
+          <input id="HighBP" name="HighBP" placeholder="High Blood Pressure Status (0/1)"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="HighChol"><b>High Cholesterol</b></label>
+            <br>
+          <input id="HighChol" name="HighChol" placeholder="High Cholesterol Status (0/1)" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="BMI"><b>BMI</b></label>
+            <br>
+          <input placeholder="Body Mass Index" name="BMI" id="BMI" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="Smoker"><b>Smoker</b></label>
+            <br>
+          <input id="Smoker" name="Smoker" placeholder="Smoker Status (0/1)"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="Stroke"><b>Stroke</b></label>
+            <br>
+          <input id="Stroke" name="Stroke" placeholder="Stroke Status (0/1)" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="PhysActivity"><b>Physical Activity</b></label>
+            <br>
+          <input placeholder="Physical Activity Level" name="PhysActivity" id="PhysActivity" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="Fruits"><b>Fruits Consumption</b></label>
+            <br>
+          <input id="Fruits" name="Fruits" placeholder="Fruits Consumption Level"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="HvyAlcoholConsump"><b>Heavy Alcohol Consumption</b></label>
+            <br>
+          <input id="HvyAlcoholConsump" name="HvyAlcoholConsump" placeholder="Heavy Alcohol Consumption Status (0/1)" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="AnyHealthcare"><b>Healthcare Access</b></label>
+            <br>
+          <input placeholder="Healthcare Access (0/1)" name="AnyHealthcare" id="AnyHealthcare" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="Sex"><b>Sex</b></label>
+            <br>
+          <input id="Sex" name="Sex" placeholder="Sex (Male/Female)"  type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="Age"><b>Age</b></label>
+            <br>
+          <input id="Age" name="Age" placeholder="Age" type="text" class="validate">
+        </div>
+      </div>
+      <br>
+      <div class="row center">
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Likelihood</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+    <br><br>
+  </div>
+  </div>
+  </body>
+</html>
+
